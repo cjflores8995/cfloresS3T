@@ -15,6 +15,18 @@ public partial class vMain : ContentPage
 
     }
 
+    public vMain(string usuario)
+    {
+        InitializeComponent();
+
+        pkEstudiantes.ItemsSource = ListadoEstudiantes.Nombres;
+
+        ValidarDecimales();
+
+        DisplayAlert("Éxito", $"Te damos la bienvenida, {usuario}", "Aceptar");
+
+    }
+
     private async void btnProcesar_Clicked(object sender, EventArgs e)
     {
         var camposTexto = new List<Entry> { txtNotaSeguimiento_1, txtExamen_1, txtNotaSeguimiento_2, txtExamen_2 };

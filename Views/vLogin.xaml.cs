@@ -17,7 +17,7 @@ public partial class vLogin : ContentPage
 
 		if(EsUsuarioValido(usuario, password))
 		{
-			await Navigation.PushAsync(new vMain());
+			await Navigation.PushAsync(new vMain(usuario));
 		}
 		else
 		{
