@@ -11,7 +11,7 @@ namespace cfloresS2
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new vMain());
+            return new Window(new NavigationPage(new vLogin()));
         }
     }
 }
