@@ -2,8 +2,8 @@ namespace cfloresS2.Views;
 
 public partial class vLogin : ContentPage
 {
-	private readonly string[] usuarios = { "Carlos", "Ana", "Jose" };
-	private readonly string[] passwords = { "carlos123", "ana123", "jose123" };
+	private readonly string[] user = { "Carlos", "Ana", "Jose" };
+	private readonly string[] pass = { "carlos123", "ana123", "jose123" };
 
     public vLogin()
 	{
@@ -33,9 +33,9 @@ public partial class vLogin : ContentPage
 	/// <returns></returns>
 	private bool EsUsuarioValido(string usuario, string password)
 	{
-		for(int i=0; i< usuarios.Length; i++)
+		for(int i=0; i< user.Length; i++)
 		{
-			if (usuarios[i].Equals(usuario, StringComparison.OrdinalIgnoreCase) && passwords[i].Equals(password, StringComparison.OrdinalIgnoreCase))
+			if (user[i].Equals(usuario, StringComparison.OrdinalIgnoreCase) && pass[i].Equals(password, StringComparison.OrdinalIgnoreCase))
 			{
 				return true;
 			}
